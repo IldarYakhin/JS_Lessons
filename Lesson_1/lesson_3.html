@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3</title>
+</head>
+<body>
+    <script>
+        'use strict'; 
+
+        let result_1 = 10 + 10 + "10";
+        console.log(result_1);
+        /*
+        1. 10 + 10 = 20
+        2. 20 + "10" = 2010
+        */
+
+        let result_2 = 10 + "10" + 10;
+        console.log(result_2);
+        /*
+        1. 10 + "10" = 1010
+        2. 1010 + 10 = 101010
+        */
+
+        let result_3 = 10 + 10 + +"10";
+        console.log(result_3);
+        /*
+        1. 10 + 10 = 20
+        2. 20 + +"10" = 30
+        */
+
+        let result_4 = 10 / -"";
+        console.log(result_4);
+        /*
+        1. 10 / -"" = -Infinity
+        */
+
+        let result_5 = 10 / +"2.5";
+        console.log(result_5);
+        /*
+        1. 10 / +"2.5" = 4
+        */
+    </script>
+</body>
+</html>
