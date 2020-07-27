@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        /*
+3
+Объявить две целочисленные переменные a и b и задать им произвольные начальные
+значения. Затем написать скрипт, который работает по следующему принципу:
+o
+если a и b положительные, вывести их разность;
+o
+если а и b отрицательные, вывести их произведение;
+o
+если а и b разных знаков, вывести их сумму;
+
+        */
+
+        let first = +prompt('Input first')
+        let second = +prompt('Input second')
+
+        if (first > 0 && second > 0) {
+            
+            alert(second - first)
+
+        } else if (first < 0 && second < 0) {
+            alert(second * first)
+        } else {
+            alert(first + second)
+        }
+
+    </script>
+</body>
+</html>
