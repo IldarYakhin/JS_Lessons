@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        const products = [
+            {
+                id: 3,
+                price: 200,
+            },
+            {
+                id: 4,
+                price: 900,
+            },
+            {
+                id: 1,
+                price: 1000,
+            },
+            ];
+        console.log(products[0]);
+        
+        function discount_15 (price) {
+            return price * 0.85
+            
+        };
+        
+        
+        for (let index = 0; index < products.length; index++) {
+
+            products[index].price = discount_15(products[index].price)
+
+        }
+        console.log(products)
+
+  
+        
+
+    </script>
+</body>
+</html>
