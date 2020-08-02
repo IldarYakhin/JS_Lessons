@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="" />
+    <meta name="viewport" content="width=, initial-scale=" />
+    <title>Task 1.2</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        function Post(author, text, date) {
+            this._author = author;
+            this._text = text;
+            this._date = date;
+
+            Post.prototype.edit = function (correction) {
+                this._text = correction;
+            };
+        }
+
+        function AttachedPost(author, text, date) {
+            Post.call(this, author, text, date);
+            this.highlighted = false;
+            AttachedPost.prototype.makeTextHighlighted = function () {
+                this._highlighted = true;
+            };
+        }
+
+        AttachedPost.prototype = Object.create(Post.prototype);
+        AttachedPost.prototype.constructor = Post;
+
+        let first = new Post('Gogol', 'Nos', '01.01.01');
+        let second = new AttachedPost('Pushkin', 'Onegin', '02.02.02');
+
+        console.log(first);
+        console.log(second);
+        second.edit('Skazka');
+        console.log(second);
+        second.makeTextHighlighted();
+        console.log(second)
+
+    </script>
+</body>
+
+</html>

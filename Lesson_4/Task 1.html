@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        let gotten = +prompt('Введите число от 1 до 999')
+
+        class digitToObject {
+            constructor(units, tens, hundreds) {
+                this.units = units;
+                this.tens = tens;
+                this.hundreds = hundreds;
+            }
+        }
+
+
+        function gottenToObject(num) {
+            if (Number.isInteger(num) && (1000 > num > 0)) {
+                if (num < 10) {
+                    let result = new digitToObject(num, 0, 0)
+                    return result
+                }
+                if (num < 100) {
+                    let units = num % 10
+                    let tens = Math.floor(num / 10)
+                    let result = new digitToObject(units, tens, 0)
+                    return result
+                }
+                if (num < 1000) {
+                    let units = num % 10
+                    let tens = Math.floor(num / 10) % 10
+                    let hundreds = Math.floor(num / 100)
+                    let result = new digitToObject(units, tens, hundreds)
+                    return result
+                }
+                
+            }
+            else {
+                    console.log('Введено не целое число или не число');
+                    let result = {}
+                    return result
+                }
+        }
+
+
+        console.log(gottenToObject(gotten))
+
+    </script>
+</body>
+
+</html>
